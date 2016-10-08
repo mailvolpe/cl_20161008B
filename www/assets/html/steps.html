@@ -1,0 +1,57 @@
+<script id="step_template" type="text/template">
+
+	<li step_id="{{step_id}}">
+		<div class="collapsible-header truncate">
+			
+			{{#step_status}}<i id="{{step_id}}_checkbox" class="green-text darken-3 mdi-toggle-check-box"></i>{{/step_status}}
+			{{^step_status}}<i id="{{step_id}}_checkbox" class="grey-text mdi-toggle-check-box-outline-blank"></i>{{/step_status}}
+			
+			<span id="{{step_id}}_name">{{step_name}}</span>
+		</div>
+		<div class="collapsible-body">
+			
+			<p>
+				{{description}}
+			</p>
+			
+			<p class="step-actions">
+			
+				<a href="#" class="btn open-step {{info_color}}" href="#" step_id="{{step_id}}" phase_id="{{phase_id}}">
+					<i class="mdi-navigation-more-horiz"></i>
+				</a>
+				
+
+				{{#step_status}}
+					<a href="#" id="{{step_id}}_toggler" class="right btn {{undone_color}}" step_id="{{step_id}}" phase_id="{{phase_id}}" onclick="setUndone('{{phase_id}}', '{{step_id}}')">
+						<i id="{{step_id}}_toggler_i" class="mdi-toggle-check-box-outline-blank"></i>
+					</a>				
+				{{/step_status}}
+				
+				{{^step_status}}
+					<a href="#" id="{{step_id}}_toggler" class="right btn {{done_color}}" step_id="{{step_id}}" phase_id="{{phase_id}}" onclick="setDone('{{phase_id}}', '{{step_id}}')">
+						<i id="{{step_id}}_toggler_i" class="mdi-toggle-check-box"></i>
+					</a>				
+				{{/step_status}}
+				
+				
+			</p>			
+				
+		</div>
+    </li>
+</script>
+
+
+<div class="section">
+
+	<p class="phase_description"></p>
+
+	<ul class="content_area collapsible"></ul>
+
+</div>
+
+
+<script>
+	$(document).ready(function(){
+		$('.collapsible').collapsible();
+	});
+</script>

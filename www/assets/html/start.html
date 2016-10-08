@@ -1,0 +1,38 @@
+<script id="home_content" type="text/template">
+
+	<p class="center main_img">
+		<img src="icon.png" style="width:30%; max-width:256px;">
+	</p>
+
+	<p class="center flow-text">
+		<span class="app-description">{{app_description}}</span>
+	</p>
+
+
+	{{#total_done}}
+	<div class="row">
+		<div class="center progress_info">
+			<div class="progress grey lighten-2">
+				<div class="determinate {{main_color}}" style="width: {{total_done}}%"></div>
+			</div>	
+			<span class="progress_info_text"><b>{{total_done}}% concluído</b></span>	
+		</div>		
+	</div>
+	{{/total_done}}
+	
+	<div class="row">
+		<p class="center">
+			<button class="btn-large waves-effect waves-light start-button {{main_color}}">
+			{{#total_done}}Continuar{{/total_done}}
+			{{^total_done}}Iniciar{{/total_done}}
+			</button>
+		</p>
+	</div>
+	
+</script>
+
+<div class="section">
+
+	<div class="home_content"></div>
+	
+</div>

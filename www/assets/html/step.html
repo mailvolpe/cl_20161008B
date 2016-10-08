@@ -1,0 +1,40 @@
+<script id="back_button_template" type="text/template">
+
+	<a href="#" class="card-link" phase_id="{{phase_id}}"><i class="mdi-navigation-arrow-back"></i></a>	
+
+</script>
+
+
+<script id="step_template" type="text/template">	
+
+	<div class="row">
+	
+		<h5 style="padding-top:18px;">{{step_name}}</h5>
+		
+		<p><strong>{{description}}</strong></p>
+		
+		<p>{{full_description}}</p>
+		
+		<div class="divider"></div><br>
+		
+		<div class="row">
+		
+			<form class="col s12">
+		
+				<div class="input-field col s12">
+				
+					<textarea id="step_textarea" phase_id="{{phase_id}}" step_id="{{step_id}}"  class="materialize-textarea"></textarea>
+					
+					<label for="step_textarea">Minhas anotações</label>
+					
+				</div>
+				
+			</form>	
+	
+		</div>
+	
+	</div>
+	
+</script>
+
+<section class="step_content"></section>

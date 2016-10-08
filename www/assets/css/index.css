@@ -1,0 +1,55 @@
+.app-title {
+	font-size:1.7em !important;
+	line-height:1em;
+}
+
+.card-link{
+	cursor:pointer;
+}
+
+.card-link:HOVER{
+	opacity:0.8;
+}
+
+.step-actions{
+	padding:0.1rem 1rem 0.1rem 1rem !important;
+}
+
+.btn-narrow{
+	padding-left:9px !important;
+	padding-right:9px !important;
+}
+
+.collapsible-body{
+	background-color:#fbfbfb;
+}
+
+.notes-row{
+	margin-bottom: 0;
+}
+
+.container{
+	width:98%;
+}
+
+
+.hide{
+	display:none;
+}
+
+.main_img{
+	margin-top:15%;
+}
+
+.main_img img{
+	max-width:75%;
+}
+
+.progress_info{
+	width:80%;
+	margin:auto;
+}
+
+.progress_info .progress{
+	height:24px;
+}
